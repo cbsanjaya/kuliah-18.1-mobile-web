@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>Comic {{ urlComic }}, Chapter {{ urlChapter }}</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -10,11 +13,4 @@
       <ion-img class="responsive-image" [src]="image"></ion-img>
     </ion-item>
   </ion-list>    
-    <!-- <ion-list lines="inset">
-      <ion-item *ngFor="let image of chapter.images">
-        <ion-label>
-          <h2>{{ image }}</h2>
-        </ion-label>
-      </ion-item>
-    </ion-list> -->
 </ion-content>
