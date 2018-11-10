@@ -1,13 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Home</ion-title>    
+    <ion-title>One Piece</ion-title>    
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
-  <ion-button shape="round" color="primary" fill="outline" disabled strong>Hello World</ion-button>
-  <ion-button expand="full" href="https://google.com">Halo</ion-button>
-
+  <ion-list lines="inset">
+    <ion-item *ngFor="let content of comic.contents" routerLink="/detail/{{ comic.comic }}/{{ content.chapter }}">
+      <ion-label>
+        <h2>{{ content.chapter }}</h2>
+        <p>{{ content.title }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
